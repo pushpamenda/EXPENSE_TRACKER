@@ -1,0 +1,22 @@
+<html>
+    <html lang="en">
+    <head>
+        <body>
+        {% block start %}
+
+        {% endblock %}
+
+
+
+
+        {% if messages %}
+        <script>
+            {% for message in messages %}
+            alert('{{message}}')
+            {% endfor %}
+        </script>
+{% endif %}
+    </body>
+    </head>
+        
+</html>
