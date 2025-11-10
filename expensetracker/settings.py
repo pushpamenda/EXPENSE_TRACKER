@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-tr$4h54i&#k0tdtq!7i06_%#=&*_6p#+qie_2&q6*4+1$kv%@1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,6 +49,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 
 ROOT_URLCONF = 'expensetracker.urls'
 

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block start %}
+
+ <h3>Register Page</h3>
+      <form method="POST" id="form">
+        {% csrf_token %}
+        <div class="form-control">
+          <label for="text">Username</label>
+          <input type="text" name="username" id="text" placeholder="Username..." />
+          <small>Unique Username is Required</small>
+        </div>
+        <div class="form-control">
+          <label for="text">First name</label>
+          <input type="text" name="first_name" id="text" placeholder="First Name..." />
+        </div>
+        <div class="form-control">
+          <label for="text">Last name</label>
+          <input type="text" name="last_name" id="text" placeholder="Last Name..." />
+        </div>
+        <div class="form-control">
+          <label for="password">Password <br/></label>
+          <input type="password" name="pswrd" id="password" placeholder="Password..." />
+        </div>
+        <p>Already have an account <a href="{% url 'login_view' %}">Login</a></p>
+        <button class="btn" type="submit" style="background-color:rgb(115, 33, 197)">Register</button>
+      </form>
+{% endblock %}
