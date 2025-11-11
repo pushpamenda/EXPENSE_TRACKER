@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block start %}
 
+
  <h3>Login Page</h3>
       <form method="POST" id="form">
         {% csrf_token %}
         <div class="form-control">
-          <label for="text">Username</label>
+          <label for="text">Username</label>  
           <input type="text" name="username" id="text" placeholder="Username..." />
           <small>Unique Username is Required</small>
         </div>
